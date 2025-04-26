@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Shower Merari</title>
+    <style>
+        /* CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff5f7;
+            color: #d14d8b;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            padding: 30px 0;
+            background: linear-gradient(135deg, #f9c5d5, #fce4ec);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: fadeIn 2s;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s 0.5s both;
+        }
+        
+        .date-place {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 80%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            animation: slideUp 1s 1s both;
+        }
+        
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+            margin: 30px 0;
+        }
+        
+        .gallery img {
+            scroll-snap-align: center;
+            min-width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        /* --- BOTONES FRESITA (NUEVO ESTILO) --- */
+        .btn-fresita {
+            display: inline-block;
+            background-color: #FF6B6B; /* Rojo acuarela */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 15px;
+            box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .btn-fresita:hover {
+            background-color: #E05555;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(255, 107, 107, 0.4);
+        }
+        
+        .btn-fresita:hover::before {
+            content: "🍓";
+            margin-right: 8px;
+            animation: bounce 0.5s;
+        }
+        
+        #address {
+            color: #c373b0;
+            text-decoration: none;
+            font-weight: 600;
+        }
+            text-decoration: none;
+            font-weight: 600;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        /* --- (Fin de botones fresita) --- */
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f9c5d5;
+            opacity: 0;
+        }
+        
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .date-place {
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Baby Merari</h1>
+            <p class="subtitle">Con corazones llenos de gratitud, queremos compartir con ustedes la alegría de la próxima llegada de nuestra princesita Merari.</p>
+            <p>"Porque tú formaste mis entrañas;
+                Tú me hiciste en el vientre de mi madre.
+                Te alabaré, porque asombrosa y maravillosamente he sido hecho"
+                — Salmo 139:13-14</p>
+            <img src="/assets/berry.png" alt="Baby Shower" width="150" style="animation: fadeIn 2s 1s both;">
+        </header>
+        
+        <div class="date-place">
+            <h2>📅 Sábado, 17 de Mayo</h2>
+            <p>⏰ 10:00 AM</p>
+            <p>📍 Casa de Hnos Santillana</p>
+            <p><a href="https://maps.app.goo.gl/AUtZQAterTgyeVWv6" id="address">🏠 Acequia del Barro 3804, Las Acequias.</a></p>
+        </div>
+        
+        <p>¡Únete a nosotros para celebrar la llegada de nuestra pequeña! �</p> 
+        
+        <div class="gallery">
+            <img src="https://i.imgur.com/1.jpg" alt="Ultrasound">
+            <img src="https://i.imgur.com/2.jpg" alt="Parents">
+            <img src="/assets/babyclothes.jpg" alt="Baby clothes">
+        </div>
+
+        <p>¡No olvides confirmar tu asistencia!</p>
+        <a href="https://wa.link/j1u5r4" class="btn-fresita" target="_blank">Confirmar por WhatsApp ✅</a>
+        <a href="https://www.amazon.com.mx/baby-reg/mariafrausto-sanchez-junio-2025-juarez/33RRZC5DXH7E0" class="btn-fresita" target="_blank"> Mesa de Regalos 🎁</a>
+        
+        <p style="margin-top: 30px;"> 🎁🍓 Pañales Etapa 1, 2 y 3. </p>
+    </div>
+    
+    <footer>
+        <p>Con amor, familia Pio Frausto</p>
+    </footer>
+
+    <script>
+        // JavaScript para efectos
+        document.addEventListener('DOMContentLoaded', function() {
+            // Efecto de confeti
+            function createConfetti() {
+                const colors = ['#f9c5d5', '#fce4ec', '#d14d8b', '#ffebee'];
+                for (let i = 0; i < 100; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.top = -10 + 'px';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                    
+                    document.body.appendChild(confetti);
+                    
+                    const animation = confetti.animate([
+                        { top: -10 + 'px', opacity: 1 },
+                        { top: 100 + 'vh', opacity: 0 }
+                    ], {
+                        duration: Math.random() * 3000 + 2000,
+                        delay: Math.random() * 2000
+                    });
+                    
+                    animation.onfinish = () => confetti.remove();
+                }
+            }
+            
+            // Lanzar confeti al cargar
+            setTimeout(createConfetti, 500);
+            
+            // Galería interactiva
+            const gallery = document.querySelector('.gallery');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            gallery.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - gallery.offsetLeft;
+                scrollLeft = gallery.scrollLeft;
+            });
+
+            gallery.addEventListener('mouseleave', () => {
+                isDown = false;
+            });
+
+            gallery.addEventListener('mouseup', () => {
+                isDown = false;
+            });
+
+            gallery.addEventListener('mousemove', (e) => {
+                if(!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - gallery.offsetLeft;
+                const walk = (x - startX) * 2;
+                gallery.scrollLeft = scrollLeft - walk;
+            });
+        });
+    </script>
+</body>
+</html>
